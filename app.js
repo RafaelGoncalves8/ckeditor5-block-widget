@@ -18,7 +18,7 @@ ClassicEditor.create(document.querySelector("#editor"), {
     "italic",
     "numberedList",
     "bulletedList",
-    "simpleBox",
+    // "simpleBox",
   ],
 })
   .then((editor) => {

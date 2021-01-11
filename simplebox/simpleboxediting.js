@@ -4,7 +4,7 @@ import {
   toWidgetEditable,
 } from "@ckeditor/ckeditor5-widget/src/utils";
 import Widget from "@ckeditor/ckeditor5-widget/src/widget";
-import InsertSimpleBoxCommand from "./simpleboxcommand";
+import InsertSimpleBoxCommand from "./insertsimpleboxcommand";
 
 export default class SimpleBoxEditing extends Plugin {
   static get requires() {
