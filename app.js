@@ -8,20 +8,16 @@ import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 
 import SimpleBox from "./simplebox/simplebox"; // ADDED
 
+import CKEditorInspector from "@ckeditor/ckeditor5-inspector";
+
 ClassicEditor.create(document.querySelector("#editor"), {
-  plugins: [
-    Essentials,
-    Paragraph,
-    Heading,
-    List,
-    Bold,
-    Italic,
-    SimpleBox, // ADDED
-  ],
+  plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, SimpleBox],
   toolbar: ["heading", "bold", "italic", "numberedList", "bulletedList"],
 })
   .then((editor) => {
     console.log("Editor was initialized", editor);
+
+    CKEditorInspector.attach("editor", editor);
 
     // Expose for playing in the console.
     window.editor = editor;
