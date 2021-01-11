@@ -6,13 +6,20 @@ import List from "@ckeditor/ckeditor5-list/src/list";
 import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 
-import SimpleBox from "./simplebox/simplebox"; // ADDED
+import SimpleBox from "./simplebox/simplebox";
 
 import CKEditorInspector from "@ckeditor/ckeditor5-inspector";
 
 ClassicEditor.create(document.querySelector("#editor"), {
   plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, SimpleBox],
-  toolbar: ["heading", "bold", "italic", "numberedList", "bulletedList"],
+  toolbar: [
+    "heading",
+    "bold",
+    "italic",
+    "numberedList",
+    "bulletedList",
+    "simpleBox",
+  ],
 })
   .then((editor) => {
     console.log("Editor was initialized", editor);
